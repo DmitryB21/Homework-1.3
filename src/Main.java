@@ -30,7 +30,7 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
         byte a = 67;
-        short b = 27897;
+        char b = 27897;
         int c = 569;
         long d = 987678965549L;
         float e = 27.12f;
@@ -45,30 +45,26 @@ public class Main {
         int amountStudent2 = 27;
         int amountStudent3 = 30;
         int amountPaperTotal = 480;
-        int sumStudent = amountStudent1 + amountStudent2 + amountStudent3;
-        int amountPaper = amountPaperTotal / sumStudent;
+        int totalStudent = amountStudent1 + amountStudent2 + amountStudent3;
+        int amountPaper = amountPaperTotal / totalStudent;
         System.out.println("На каждого ученика рассчитано " + amountPaper + " листов бумаги");
     }
 
     public static void task4() {
         System.out.println("Задача 4");
-        int productivityPerMinute = 16 / 2;
-        int minuteInHours = 60;
-        int hoursInDay = 24;
-        int amountDay1 = 3;
-        int amountDay2 = 30;
-        int period1 = 20;
-        int period2 = minuteInHours * hoursInDay;
-        int period3 = period2 * amountDay1;
-        int period4 = period2 * amountDay2;
-        int product1 = productivityPerMinute * period1;
-        int product2 = productivityPerMinute * period2;
-        int product3 = productivityPerMinute * period3;
-        int product4 = productivityPerMinute * period4;
-        System.out.println("За 20 минут машина произвела " + product1 + " штук бутылок");
-        System.out.println("За сутки машина произвела " + product2 + " штук бутылок");
-        System.out.println("За 3 дня машина произвела " + product3 + " штук бутылок");
-        System.out.println("За месяц машина произвела " + product4 + " штук бутылок");
+        int bottle = 16;
+        int minute = 2;
+        int bottlesPerMinute = bottle / minute;
+
+        int bottlesPer20Minute = bottlesPerMinute * 20;
+        int bottlesPerHour = bottlesPer20Minute * 3;
+        int bottlesPerDay = bottlesPerHour * 24;
+        int bottlesPer3Day = bottlesPerDay * 3;
+        int bottlesPer30Day = bottlesPer3Day * 10;
+        System.out.println("За 20 минут машина произвела " + bottlesPer20Minute + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottlesPerDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + bottlesPer3Day + " штук бутылок");
+        System.out.println("За месяц машина произвела " + bottlesPer30Day + " штук бутылок");
     }
 
     public static void task5() {
